@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Harmonizing </title>
+
+	<style>
+		html {
+    		position: fixed;
+    		min-width: 1024px;
+    		min-height: 768px;
+    		height: 100%;
+		}
+
+		body {height:100%;
+   			width:100%;
+   			background-image: url("artboard3.png");/*your background image*/  
+   			background-repeat:no-repeat;/*we want to have one single image not a repeated one*/  
+   			background-size:cover;    
+		}
+
+ 
+	.button {
+		display:inline-block;
+		background-color:transparent;
+		position: absolute;
+		border: none;
+		height:76px;
+		width: 210px;
+	}
+
+	#myButton1
+	{
+		top: 280px;
+		left: 543px;
+	}
+	#myButton2
+	{
+		top: 388px;
+		left: 543px;
+	}
+	#myButton3
+	{
+		top: 490px;
+		left: 543px;
+	}
+
+	#play
+	{
+		display:inline-block;
+		background-color:transparent;
+		position: absolute;
+		border: none;
+		height:74px;
+		width: 170px;
+		top: 280px;
+		left: 65px;
+	}
+	#pause
+	{
+		display:inline-block;
+		background-color:transparent;
+		position: absolute;
+		border: none;
+		height:74px;
+		width: 170px;
+		top: 387px;
+		left: 65px;
+	}
+	</style>
+</head>
+<body>
+
+	<script>
+		function PlaySound(soundobj) {  
+			var thissound= document.querySelectorAll(soundobj);
+			for(var i = 0;i<thissound.length;i++)
+			{
+				thissound.item(i).play();  
+				console.log("looping through the class aha");
+			}
+		}   
+		function PauseSound(soundobj) {  
+			var thissound= document.querySelectorAll(soundobj);
+			for(var i = 0;i<thissound.length;i++)
+			{
+				thissound.item(i).pause();  
+				console.log("looping through the class aha");
+			}
+		} 
+	</script>
+	<div class="container contents">
+	<form>  
+		<input id="play" type="button" onClick="PlaySound('.audio')">  
+		<input id="pause" type="button" onClick="PauseSound('.audio')">  
+	</form>
+
+	<div class="row">
+		<div id="chinh" class="music" style="width:200px; margin:auto; position:relative; top:293px; left:450px">
+				<audio  class="audio"  controls preload="auto" autobuffer>
+  					<source src="http://localhost:3003/download?id=chinh.mp3" type="audio/mpeg" >
+				</audio>
+	</div>
+	<button id="myButton1" class="button"></button>
+	<div id="be" class="music" style="width:200px; margin:auto; position:relative; top:365px; left:450px">
+				<audio class="audio" id="be" controls preload="auto" autobuffer>
+					 <source src="http://localhost:3003/download?id=be.mp3" type="audio/mpeg">
+				</audio>
+
+	</div>
+	<button id="myButton2" class="button"></button>
+	
+
+	<div id="beat" class="music" style="width:200px; margin:auto; position:relative; top:435px; left:450px">
+			<audio class="audio" id="beat" controls preload="auto" autobuffer>
+					 <source src="http://localhost:3003/download?id=beat.mp3" type="audio/mpeg">
+			</audio>
+	</div>
+	<button id="myButton3" class="button"></button>
+
+	<script type="text/javascript">
+    	document.getElementById("myButton1").onclick = function () {
+        	location.href = "/record";
+        	console.log("button1 clicked");
+    	};
+	</script>
+	<script type="text/javascript">
+    	document.getElementById("myButton2").onclick = function () {
+        	location.href = "/record";
+    	};
+	</script>
+	<script type="text/javascript">
+    	document.getElementById("myButton3").onclick = function () {
+        	location.href = "/record";
+    	};
+	</script>
+		</div>
+	</div>
+	
+</body>
+</html>
+
+
+

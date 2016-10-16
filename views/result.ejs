@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%=title%></title>
+	<style>
+	html {
+    		position: fixed;
+    		min-width: 1024px;
+    		min-height: 768px;
+    		height: 100%;
+		}
+
+	body {height:100%;
+   			width:100%;
+   			background-image: url("../public/art.png");/*your background image*/  
+   			background-repeat:no-repeat;/*we want to have one single image not a repeated one*/  
+   			background-size:cover;    
+		}
+
+ 
+	#backbutton {
+		display:inline-block;
+		background-color:transparent;
+		position: absolute;
+		border: none;
+		height:205px;
+		width: 289px;
+		top:505px;
+		left:45px;
+	}
+
+
+	#play
+	{
+		display:inline-block;
+		background-color:transparent;
+		position: absolute;
+		border: none;
+		height:75px;
+		width: 172px;
+		top: 284px;
+		left: 44px;
+	}
+	#pause
+	{
+		display:inline-block;
+		background-color:transparent;
+		position: absolute;
+		border: none;
+		height:75px;
+		width: 172px;
+		top: 391px;
+		left: 44px;
+	}
+	</style>
+</head>
+<body>
+
+	<script>
+		function PlaySound(soundobj) {  
+			var thissound= document.querySelectorAll(soundobj);
+			for(var i = 0;i<thissound.length;i++)
+			{
+				thissound.item(i).play();  
+				console.log("looping through the class aha");
+			}
+		}   
+		function PauseSound(soundobj) {  
+			var thissound= document.querySelectorAll(soundobj);
+			for(var i = 0;i<thissound.length;i++)
+			{
+				thissound.item(i).pause();  
+				console.log("looping through the class aha");
+			}
+		} 
+
+	</script>
+
+	<div class="container contents">
+	<form>  
+		<input  id="play" type="button" onClick="PlaySound('.audio')">  
+		<input id="pause" type="button" onClick="PauseSound('.audio')">  
+	</form>
+
+	<div class="row">
+		<div class="music" class="music" style="width:200px; margin:auto; position:relative; top:298px; left:420px">
+				<audio class="audio" id="audio1" controls preload="auto" autobuffer>
+  					<source src="http://localhost:3003/download?id=<%=upload%>" type="audio/mpeg" >
+				</audio>
+	</div>
+	<div class="music" style="width:200px; margin:auto; position:relative; top:370px; left:420px">
+				<audio class="audio" id="audio2" controls preload="auto" autobuffer>
+					 <source src="http://localhost:3003/download?id=be.mp3" type="audio/mpeg">
+				</audio>			
+			</div>
+	<div class="music" style="width:200px; margin:auto; position:relative; top:440px; left:420px">
+				<audio class="audio" id="audio3" controls preload="auto" autobuffer>
+					 <source src="http://localhost:3003/download?id=beat.mp3" type="audio/mpeg">
+				</audio>			
+			</div>
+
+		</div>
+
+	</div>
+
+	<button id="backbutton" class="button"></button>
+
+<script type="text/javascript">
+    document.getElementById("backbutton").onclick = function () {
+        location.href = "/choose";
+    };
+</script>
+	
+</body>
+</html>
+
+
+

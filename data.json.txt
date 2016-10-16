@@ -1,0 +1,1 @@
+[{"fieldname":"userFile","originalname":"Em Của Ngày Hôm Qua - Sơn Tùng M-TP (Guitar Solo).mp3","encoding":"7bit","mimetype":"audio/mpeg","destination":"music/","filename":"userFile-1476615670749.mp3","path":"music/userFile-1476615670749.mp3","size":5777377}]

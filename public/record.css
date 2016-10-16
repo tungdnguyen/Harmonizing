@@ -1,0 +1,63 @@
+html {
+
+    position: fixed;
+
+    min-width: 1024px;
+
+    min-height: 768px;
+
+    height: 100%;
+
+}
+
+
+
+body {height:100%;
+
+   width:100%;
+
+   background-image: url("record2.png");/*your background image*/  
+
+   background-repeat:no-repeat;/*we want to have one single image not a repeated one*/  
+
+   background-size:cover;    
+
+}
+
+
+
+ 
+
+#choose {
+
+  background-color:transparent;
+
+  position: absolute;
+
+  border: none;
+
+  height:75px;
+
+  top: 320px;;
+
+  left: 400px;
+
+  width: 245px;
+}
+
+#submit {
+
+  background-color:transparent;
+
+  position: absolute;
+
+  border: none;
+
+  height:75px;
+
+  top: 320px;;
+
+  left: 700px;
+
+  width: 245px;
+}

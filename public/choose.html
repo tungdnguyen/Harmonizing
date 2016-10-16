@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Choose your song </title>
+	<style>
+		html {
+    		position: fixed;
+    		min-width: 1024px;
+    		min-height: 768px;
+    		height: 100%;
+		}
+
+		body {height:100%;
+   			width:100%;
+   			background-image: url("artboard2.png");/*your background image*/  
+   			background-repeat:no-repeat;/*we want to have one single image not a repeated one*/  
+   			background-size:cover;    
+		}
+
+ 
+	#myButton {
+		background-color:transparent;
+		position: absolute;
+		border: none;
+		height:245px;
+		top: 395px;
+		left: 891px;
+		width: 245px;
+	
+	}
+	</style>
+</head>
+<body>
+
+<button id="myButton" class="button"></button>
+
+<script type="text/javascript">
+    document.getElementById("myButton").onclick = function () {
+        location.href = "/harmonysample";
+    };
+</script>
+
+
+	
+</body>
+</html>
+

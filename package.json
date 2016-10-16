@@ -1,0 +1,22 @@
+{
+  "name": "express-music",
+  "version": "0.0.0",
+  "description": "music app with nodejs and expressjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "music",
+    "express"
+  ],
+  "author": "wazzie27",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "jsonfile": "^2.4.0",
+    "multer": "^1.2.0",
+    "socketio-file-upload": "^0.5.1"
+  }
+}
